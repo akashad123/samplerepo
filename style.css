@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.container{
+    width: 100%; /* For max width as this is parent class */
+    height: 100vh; /*viewport height | 1vh = 19.2px */
+    background-color: white;
+    position: relative; /* One comes corresponding to other (given to parent) */
+    border: 2px solid red;
+}
+
+.navbar{
+    display: flex; /* List will be placed in the right side of the image */
+    justify-content: space-between; /* To create space between two childs */
+    width: 85%;
+    margin-left: 100px;
+    align-items: center; /* Makes items to center vertically */
+}
+
+#logo{
+    width: 130px;
+}
+
+.listitem{
+    display: inline-block; /* Change UL list items to straight line */
+    list-style: none; /* Removes UL list dot */
+    margin: 10px 20px;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* tag:pseudo-class{property:value} */
+.links:hover{
+    color: red;    
+}
+
+.title{
+    margin-top: 13%;
+    margin-left: 8%;
+}
+
+.title-h1{
+    font-size: 50px;
+}
+
+.lastname{
+    color: orange;
+}
+
+.download{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;  /* Then only margin-top works */
+    /* margin-top: 30px; */
+}
+
+.title-img{
+    width: 45%;
+    height: 80%;
+    position: absolute; /* one above the other (given to child) */
+    right: 30px;
+    bottom: 0px;
+}
+
+.title-img img{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: bottom 1s , left 2s;
+}
+
+.title-img:hover #shape{
+    bottom: 70px;
+}
+
+.title-img:hover #girl{
+    left: 40%;
+}
+
+#about{
+    margin: 15% 8% 0% 8%;
+
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: 30px;
+}
+
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin-top: 2rem; /* 1rem = 16px */
+    gap: 2rem;
+    margin-top: 2rem; 
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 2rem;
+}
+
+.about-details{
+    font-size: 19px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.informations{
+    margin-top: 2rem;
+}
+
+.info-box{
+    margin-bottom: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.info-box span{
+    margin-left: 1rem;
+}
+
+#skills{
+    margin: 8% 8% 0px 8%;
+}
+
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.skill-img img{
+    width: 90%;
+    padding-left: 4rem; 
+}
+
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem 0px;
+    position: relative;
+}
+
+.base-bar{
+    
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.html-bar{
+    width: 95%;
+    background-color: orange;
+}
+
+.css-bar{
+    width: 88%;
+    background-color: orange;
+}
+
+.react-bar{
+    width: 89%;
+    background-color: orange;
+}
+
+.js-bar{
+    width: 85%;
+    background-color: orange;
+}
+
+.icon-set{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.icon , .up-arrow{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Horizontally centre */
+    align-items: center; /* Vertically centre */
+    margin: 0px 10px;
+}
+
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+
+.icon:hover{
+    background-image: linear-gradient(to bottom right, yellow, red);
+}
+
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s; 
+}
+
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}   
+
+.up-arrow{
+    float: right;
+    background-image: linear-gradient(to bottom right, yellow, red);
+    margin: 0px 10px 50px 0px;
+}
+
+.up-arrow:hover i{
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+

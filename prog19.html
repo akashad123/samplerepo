@@ -1,0 +1,57 @@
+<!-- var() function - to insert values to css variables -->
+<!-- Variables - to store data -->
+<!-- Local scope, global scope variables -->
+<!-- Local scope - limited access -->
+<!-- Global scope - can access through the css file -->
+<!-- Global varibale creation
+:root{
+    --varibale_name:value (two hyphens required and case sensitive)
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable styling</title>
+
+    <style>
+
+        :root{
+            --x : blue;
+            --y : red;
+            --z : green;
+            }
+
+        #para1{
+            color: var(--x);
+            --z : green;    /* Only works within this tag, if you need to use this in another tag,
+                                 then declare it globally */
+        }
+
+        #para2{
+            color: var(--y);
+        }
+
+        h1{
+            color: var(--z);
+        }
+
+        body{
+            --bg : black;
+            background-color: var(--bg);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Heading</h1>
+
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, aperiam commodi optio facere, accusamus libero odio minus quisquam corrupti molestiae totam, explicabo aliquid neque rem velit mollitia! Incidunt, iure magni? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et error necessitatibus amet, provident saepe voluptates delectus. Quibusdam ipsum corrupti enim, commodi soluta provident aspernatur iusto quo. Assumenda esse laboriosam voluptatum.</p>
+
+    <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sint cupiditate quaerat, libero aspernatur vel necessitatibus cum praesentium enim, nam repudiandae incidunt magnam ab neque dolorum odio dolor itaque ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi officiis molestiae delectus voluptatem deserunt sunt tenetur dolore exercitationem? Dignissimos placeat tempora distinctio ipsa perspiciatis cupiditate autem, quasi aut. Quisquam, culpa?</p>
+    
+</body>
+</html>
