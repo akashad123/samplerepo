@@ -9,7 +9,6 @@
     height: 100vh; /*viewport height | 1vh = 19.2px */
     background-color: white;
     position: relative; /* One comes corresponding to other (given to parent) */
-    border: 2px solid red;
 }
 
 .navbar{
